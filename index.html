@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portofolio Farel Agustinus - Pengembang Web & Game Inovatif</title>
+    <meta name="description" content="Portofolio Farel Agustinus, siswa SMK Prestasi Prima yang bersemangat dalam pengembangan web dan game. Lihat proyek-proyek kreatif dan inovatif saya!">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="favicon.png">
+</head>
+<body>
+    <header class="animate__animated animate__fadeIn animate__slower">
+        <div class="container">
+            <h1><i class="fas fa-rocket animate__animated animate__bounce animate__infinite animate__slow"></i> Farel Agustinus</h1>
+            <div class="subtitle">
+                <span class="typing-text"></span><span class="cursor">|</span>
+            </div>
+            <div class="header-decoration">
+                <div class="line animate__animated animate__slideInLeft animate__delay-1s"></div>
+                <div class="circle pulse animate__animated animate__zoomIn animate__delay-2s"></div>
+                <div class="line animate__animated animate__slideInRight animate__delay-1s"></div>
+            </div>
+        </div>
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                const texts = ["Pengembang Web Kreatif", "Game Developer Inovatif", "UI/UX Designer Berbakat", "Siswa SMK Berprestasi"];
+                const typingText = document.querySelector('.typing-text');
+                const cursor = document.querySelector('.cursor');
+                let textIndex = 0;
+                let charIndex = 0;
+
+                function type() {
+                    if (charIndex < texts[textIndex].length) {
+                        typingText.textContent += texts[textIndex].charAt(charIndex);
+                        charIndex++;
+                        setTimeout(type, 100);
+                    } else {
+                        setTimeout(erase, 2000);
+                    }
+                }
+
+                function erase() {
+                    if (charIndex > 0) {
+                        typingText.textContent = texts[textIndex].substring(0, charIndex-1);
+                        charIndex--;
+                        setTimeout(erase, 50);
+                    } else {
+                        textIndex = (textIndex + 1) % texts.length;
+                        setTimeout(type, 500);
+                    }
+                }
+
+                type();
+            });
+        </script>
+    </header>
+
+    <nav class="navbar animate__animated animate__slideInDown animate__delay-1s">
+        <ul>
+            <li><a href="#home" class="animate__animated animate__fadeIn animate__delay-2s scroll-link"><i class="fas fa-home"></i> Beranda</a></li>
+            <li><a href="#about" class="animate__animated animate__fadeIn animate__delay-2s scroll-link"><i class="fas fa-user"></i> Tentang Saya</a></li>
+            <li><a href="#skills" class="animate__animated animate__fadeIn animate__delay-3s scroll-link"><i class="fas fa-cogs"></i> Keahlian</a></li>
+            <li><a href="#projects" class="animate__animated animate__fadeIn animate__delay-3s scroll-link"><i class="fas fa-project-diagram"></i> Proyek</a></li>
+            <li><a href="#contact" class="animate__animated animate__fadeIn animate__delay-4s scroll-link"><i class="fas fa-envelope"></i> Kontak</a></li>
+        </ul>
+    </nav>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const scrollLinks = document.querySelectorAll('.scroll-link');
+            scrollLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href');
+                    const targetElement = document.querySelector(targetId);
+                    targetElement.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                });
+            });
+        });
+    </script>
+
+    <div class="container">
+        <section id="home" class="section animate__animated animate__fadeInUp" data-aos="fade-up" data-aos-duration="1500">
+            <h2><i class="fas fa-home animate__animated animate__heartBeat animate__infinite animate__slow"></i> Beranda</h2>
+            <div class="home-content">
+                <img src="WhatsApp Image 2024-10-03 at 13.02.48.jpeg" alt="Foto Profil Farel Agustinus" class="profile-img animate__animated animate__zoomIn animate__delay-1s">
+                <div class="home-text">
+                    <h3 class="animate__animated animate__fadeInLeft animate__delay-2s">Selamat Datang di Portofolio Saya</h3>
+                    <p class="animate__animated animate__fadeInRight animate__delay-3s">Saya Farel Agustinus, seorang siswa SMK yang penuh semangat dalam mengeksplorasi dunia pengembangan web dan game. Dengan kombinasi kreativitas, inovasi, dan dedikasi, saya siap menghadapi tantangan di era digital yang dinamis. Mari jelajahi portofolio saya dan temukan bagaimana passion saya dalam teknologi dapat memberikan solusi unik untuk proyek Anda!</p>
+                    <a href="#contact" class="btn btn-primary animate__animated animate__bounceIn animate__delay-4s">Hubungi Saya</a>
+                </div>
+            </div>
+        </section>
+        
+        <div class="decorative-line animate__animated animate__fadeInLeft animate__delay-1s"></div>
+
+        <section id="about" class="section animate__animated animate__fadeInUp" data-aos="fade-up" data-aos-duration="1500">
+            <h2><i class="fas fa-user animate__animated animate__tada animate__infinite animate__slow"></i> Tentang Saya</h2>
+            <div class="about-content">
+                <div class="about-info animate__animated animate__fadeInLeft animate__delay-1s">
+                    <p><strong>Nama:</strong> Farel Agustinus</p>
+                    <p><strong>Kelas:</strong> XI PPLG 1</p>
+                    <p><strong>Sekolah:</strong> SMK Prestasi Prima</p>
+                    <p><strong>Lokasi:</strong> Jakarta, Indonesia</p>
+                    <p><strong>Minat:</strong> Pengembangan Web, Game Development, UI/UX Design</p>
+                </div>
+                <p class="about-description animate__animated animate__fadeInRight animate__delay-2s">Sebagai siswa kelas XI PPLG 1 di SMK Prestasi Prima, saya memiliki passion yang mendalam dalam dunia teknologi digital. Saya telah mengasah keterampilan dalam berbagai aspek pengembangan web dan game, termasuk HTML5, Lua, JavaScript, dan beberapa bahasa pemrograman lainnya. Kekuatan saya terletak pada kemampuan berpikir kreatif yang memungkinkan saya untuk menciptakan solusi unik dalam setiap proyek. Saya selalu antusias untuk mempelajari teknologi terbaru, seperti AI dan machine learning.</p>
+            </div>
+        </section>
+
+        <section id="skills" class="section animate__animated animate__fadeInUp" data-aos="fade-up" data-aos-duration="1500">
+            <h2><i class="fas fa-laptop-code animate__animated animate__flip animate__infinite animate__slow"></i> Keahlian</h2>
+            <div class="skills">
+                <div class="skill animate__animated animate__zoomIn animate__delay-1s" data-aos="zoom-in" data-aos-duration="1000">
+                    <i class="fab fa-html5 animate__animated animate__heartBeat animate__infinite animate__slow"></i>
+                    <h4>HTML5</h4>
+                    <div class="skill-bar"><div class="skill-level" style="width: 95%;"></div></div>
+                </div>
+                <div class="skill animate__animated animate__zoomIn animate__delay-2s" data-aos="zoom-in" data-aos-duration="1000">
+                    <i class="fab fa-js-square animate__animated animate__heartBeat animate__infinite animate__slow"></i>
+                    <h4>JavaScript</h4>
+                    <div class="skill-bar"><div class="skill-level" style="width: 85%;"></div></div>
+                </div>
+                <div class="skill animate__animated animate__zoomIn animate__delay-3s" data-aos="zoom-in" data-aos-duration="1000">
+                    <i class="fas fa-code animate__animated animate__heartBeat animate__infinite animate__slow"></i>
+                    <h4>Lua</h4>
+                    <div class="skill-bar"><div class="skill-level" style="width: 70%;"></div></div>
+                </div>
+                <div class="skill animate__animated animate__zoomIn animate__delay-4s" data-aos="zoom-in" data-aos-duration="1000">
+                    <i class="fas fa-paint-brush animate__animated animate__heartBeat animate__infinite animate__slow"></i>
+                    <h4>UI/UX Design</h4>
+                    <div class="skill-bar"><div class="skill-level" style="width: 85%;"></div></div>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="section animate__animated animate__fadeInUp" data-aos="fade-up" data-aos-duration="1500">
+            <h2><i class="fas fa-project-diagram animate__animated animate__rotateIn animate__infinite animate__slow"></i> Proyek</h2>
+            <div class="projects">
+                <div class="project-card animate__animated animate__zoomIn animate__delay-1s" data-aos="zoom-in" data-aos-duration="1000">
+                    <img src="project1.jpg" alt="Web E-commerce" class="animate__animated animate__pulse animate__infinite animate__slow">
+                    <h3>E-commerce Inovatif</h3>
+                    <p>Platform e-commerce responsif yang saya kembangkan menggunakan HTML5, CSS3, dan JavaScript. Fitur unggulan meliputi katalog produk dinamis dengan AI-powered rekomendasi, keranjang belanja real-time, sistem pembayaran terintegrasi, dan dashboard analitik untuk penjual.</p>
+                    <a href="#" class="btn btn-secondary animate__animated animate__rubberBand animate__delay-2s">Lihat Detail</a>
+                </div>
+                <div class="project-card animate__animated animate__zoomIn animate__delay-2s" data-aos="zoom-in" data-aos-duration="1000">
+                    <img src="project2.jpg" alt="Game Petualangan 2D" class="animate__animated animate__pulse animate__infinite animate__slow">
+                    <h3>Odyssey: Petualangan 2D Epik</h3>
+                    <p>Game petualangan 2D yang memukau, dikembangkan menggunakan Lua dan framework LÖVE. Menampilkan grafis pixel art yang unik, sistem pertarungan turn-based dengan elemen strategi, cerita yang mendalam dengan multiple endings, dan fitur online multiplayer.</p>
+                    <a href="#" class="btn btn-secondary animate__animated animate__rubberBand animate__delay-3s">Lihat Detail</a>
+                </div>
+                <div class="project-card animate__animated animate__zoomIn animate__delay-3s" data-aos="zoom-in" data-aos-duration="1000">
+                    <img src="project3.jpg" alt="Sistem Manajemen Sekolah" class="animate__animated animate__pulse animate__infinite animate__slow">
+                    <h3>EduConnect: Sistem Manajemen Sekolah</h3>
+                    <p>Aplikasi web komprehensif untuk manajemen sekolah yang saya kembangkan menggunakan PHP, MySQL, dan React.js. Fitur meliputi manajemen siswa, guru, dan kelas, sistem penilaian terintegrasi, modul pembelajaran online, analitik performa siswa berbasis AI, dan dashboard admin yang intuitif.</p>
+                    <a href="#" class="btn btn-secondary animate__animated animate__rubberBand animate__delay-4s">Lihat Detail</a>
+                </div>
+            </div>
+        </section>
+        <section id="contact" class="section animate__animated animate__fadeInUp" data-aos="fade-up" data-aos-duration="1500">
+            <h2><i class="fas fa-envelope animate__animated animate__swing animate__infinite animate__slow"></i> Hubungi Saya</h2>
+            <form id="contactForm" class="contact-form animate__animated animate__fadeIn animate__delay-1s" action="https://formsubmit.co/farelagustinus09@gmail.com" method="POST">
+                <input type="text" name="name" placeholder="Nama" required class="animate__animated animate__fadeInLeft animate__delay-2s">
+                <input type="email" name="email" placeholder="Email" required class="animate__animated animate__fadeInRight animate__delay-3s">
+                <textarea name="message" placeholder="Pesan" required class="animate__animated animate__fadeInUp animate__delay-4s"></textarea>
+                <input type="hidden" name="_subject" value="Pesan Baru dari Portofolio">
+                <input type="hidden" name="_captcha" value="false">
+                <button type="submit" class="btn btn-primary animate__animated animate__bounceIn animate__delay-5s" onclick="showSuccessMessage()">Kirim Pesan</button>
+            </form>
+            <div id="successMessage" class="animate__animated animate__fadeIn" style="display: none;">
+                <p>Komentar Anda telah dikirim!</p>
+            </div>
+            <div class="email-contact animate__animated animate__fadeIn animate__delay-6s">
+                <p>Atau kirim email langsung ke: <a href="mailto:farelagustinus09@gmail.com" class="animate__animated animate__pulse animate__infinite animate__slow">farelagustinus09@gmail.com</a></p>
+            </div>
+        </section>
+        <script>
+            function showSuccessMessage() {
+                document.getElementById('successMessage').style.display = 'block';
+            }
+        </script>
+    </div>
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            fetch(this.action, {
+                method: 'POST',
+                body: new FormData(this)
+            }).then(response => {
+                document.getElementById('successMessage').style.display = 'block';
+                this.reset();
+            }).catch(error => {
+                console.error('Error:', error);
+            });
+        });
+    </script>
+
+    <footer class="animate__animated animate__fadeInUp" data-aos="fade-up" data-aos-duration="1000">
+        <p>&copy; 2024 Portofolio Farel Agustinus. Hak Cipta Dilindungi.</p>
+        <div class="social-icons">
+            <a href="#" class="animate__animated animate__bounceIn animate__delay-1s" title="GitHub"><i class="fab fa-github"></i></a>
+            <a href="#" class="animate__animated animate__bounceIn animate__delay-2s" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+            <a href="#" class="animate__animated animate__bounceIn animate__delay-3s" title="Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.instagram.com/farelagustinuss/profilecard/?igsh=bHlraDZ2OHUyNTMx" class="animate__animated animate__bounceIn animate__delay-4s" title="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.facebook.com/share/sc12Zqrn154umXKU/?mibextid=qi2Omg" class="animate__animated animate__bounceIn animate__delay-5s" title="Facebook"><i class="fab fa-facebook"></i></a>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        new WOW().init();
+        AOS.init({
+            duration: 1000,
+            once: true,
+            mirror: false,
+        });
+    </script>
+</body>
+</html>
